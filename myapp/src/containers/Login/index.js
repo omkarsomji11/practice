@@ -10,7 +10,7 @@ const AppLogin = (props) => {
       values.password === "bar" &&
       auth.login(() => {
         localStorage.setItem('isUserLoggedin', true);
-        props.history.push("/home");
+        props.history.push("/practice/home");
       }));
   };
 

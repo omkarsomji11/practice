@@ -59,9 +59,9 @@ const Home = (props) => {
   };
 
   const logout = () => {
-    auth.login(() => {
+    auth.logout(() => {
       localStorage.clear();
-      props.history.push("/");
+      props.history.push("/practice/");
     });
   };
   return (

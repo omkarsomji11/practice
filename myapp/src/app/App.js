@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route exact path="/" component={AppLogin} />
-          <ProtectedRoutes exact path="/home" component={Home} />
+          <Route exact path="/practice/" component={AppLogin} />
+          <ProtectedRoutes exact path="/practice/home" component={Home} />
           <Route path="*" component={() => "404 NOT FOUND"} />
         </Switch>
       </div>
