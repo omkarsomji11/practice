@@ -9,7 +9,8 @@ const AppLogin = (props) => {
     await (values.username === "foo" &&
       values.password === "bar" &&
       auth.login(() => {
-        props.history.push("/app");
+        localStorage.setItem('isUserLoggedin', true);
+        props.history.push("/home");
       }));
   };
 

@@ -1,13 +1,12 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import auth from "./auth";
 
 const ProtectedRoutes = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
       render={(props) => {
-        if (auth.isAuthenticated()) {
+        if (localStorage.getItem("isUserLoggedin")) {
           return <Component {...props} />;
         } else {
           return (
